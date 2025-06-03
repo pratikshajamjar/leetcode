@@ -9,6 +9,6 @@ public class Solution {
             pB = (pB == null) ? headA : pB.next;
         }
 
-        return pA; // Either intersection node or null
+        return pB; // Either intersection node or null
     }
 }
