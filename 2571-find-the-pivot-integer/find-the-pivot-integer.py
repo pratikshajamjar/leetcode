@@ -1,10 +1,8 @@
 class Solution:
     def pivotInteger(self, n: int) -> int:
-        sum = n * (n + 1) // 2
-        a = math.sqrt(sum)
+        x = sqrt(n * (n + 1) / 2)
 
-        if a - math.ceil(a) == 0:
-            return int(a)
-        else:
+        if x % 1 != 0:
             return -1
-        
+        else:
+            return int(x)
