@@ -1,8 +1,8 @@
 class Solution:
     def arrayPairSum(self, nums: List[int]) -> int:
         nums.sort()
-        totalsum=0
+        s=0
         l = len(nums)
         for i in range(0,l,2):
-            totalsum += nums[i]
-        return totalsum
+            s+=min(nums[i],nums[i+1])
+        return s
