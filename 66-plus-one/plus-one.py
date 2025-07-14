@@ -1,12 +1,7 @@
+from typing import List
+
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-
-        for i in range(len(digits)-1, -1, -1):
-            if digits[i] == 9:
-                digits[i] = 0
-            else:
-                digits[i] = digits[i] + 1
-                return digits
-        return [1] + digits 
-
-        
+        num = int(''.join(map(str, digits)))  # convert list to string, then to int
+        num += 1
+        return [int(d) for d in str(num)]     # convert back to list of digits
